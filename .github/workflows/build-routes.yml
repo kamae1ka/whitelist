@@ -1,0 +1,89 @@
+name: Build Network Routes
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl jq
+          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
+          sudo chmod +x /usr/bin/yq
+          yq --version
+
+      - name: Generate all-routes.txt
+        run: |
+          > all-routes.txt
+          resources=$(yq eval '.app | keys | .[]' resources.yaml)
+          for res in $resources; do
+            ass=$(yq eval ".app.$res[]" resources.yaml)
+            for as_str in $ass; do
+              # Extract AS number from format AS11281 -> 11281
+              asn=$(echo "$as_str" | sed 's/^AS//')
+              echo "Fetching AS $asn for $res"
+              cidrs=$(curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS$asn" | jq -r '.data.prefixes[]?.prefix // empty' | grep -v '^$' | grep -v ':' || true)
+              if [ -n "$cidrs" ]; then
+                for cidr in $cidrs; do
+                  echo "$cidr" >> all-routes.txt
+                done
+              else
+                echo "No IPv4 prefixes found for AS $asn"
+              fi
+            done
+          done
+          
+          # Sort and deduplicate routes
+          sort -u all-routes.txt > all-routes-sorted.txt
+          mv all-routes-sorted.txt all-routes.txt
+          
+          echo "Generated all-routes.txt with $(wc -l < all-routes.txt) routes"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if file exists and has content
+          if [ ! -f all-routes.txt ] || [ ! -s all-routes.txt ]; then
+            echo "Error: all-routes.txt is empty or missing"
+            exit 1
+          fi
+          
+          # Save generated file before switching branches
+          cp all-routes.txt all-routes-generated.txt
+          
+          # Ensure we're on main branch
+          git fetch origin main:main 2>/dev/null || true
+          git checkout main 2>/dev/null || git checkout -b main
+          
+          # Restore generated file
+          mv all-routes-generated.txt all-routes.txt
+          
+          # Add and commit (git will detect if there are changes)
+          git add all-routes.txt
+          if git diff --cached --quiet; then
+            echo "No changes to all-routes.txt"
+          else
+            git commit -m "Update all routes $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+            echo "Successfully pushed changes to main"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
