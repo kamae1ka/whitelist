@@ -1,6 +1,6 @@
 # MikroTik RouterOS Script
 # Generated whitelist routes for Address List
-# Generated: 2025-12-08 17:05:42 UTC
+# Generated: 2025-12-08 19:03:54 UTC
 
 # Remove existing address list entries
 /ip firewall address-list remove [find list="whitelist-routes"]
