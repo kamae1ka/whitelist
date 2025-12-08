@@ -1,6 +1,6 @@
 # MikroTik RouterOS Script
 # Generated whitelist routes for Address List
-# Generated: 2025-12-08 16:50:07 UTC
+# Generated: 2025-12-08 17:05:42 UTC
 
 # Remove existing address list entries
 /ip firewall address-list remove [find list="whitelist-routes"]
@@ -428,6 +428,7 @@
 /ip firewall address-list add list="whitelist-routes" address="173.252.96.0/19" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="176.57.165.0/24" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="179.60.192.0/22" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="184.24.26.0/24" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="185.60.216.0/22" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="185.89.216.0/22" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="185.111.156.0/24" comment="whitelist-auto"
