@@ -55,6 +55,35 @@ jobs:
           
           echo "Generated all-routes.txt with $(wc -l < all-routes.txt) routes"
 
+      - name: Generate MikroTik .rsc file
+        run: |
+          LIST_NAME="whitelist-routes"
+          OUTPUT_FILE="mikrotik-whitelist.rsc"
+          
+          echo "# MikroTik RouterOS Script" > "$OUTPUT_FILE"
+          echo "# Generated whitelist routes for Address List" >> "$OUTPUT_FILE"
+          echo "# Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> "$OUTPUT_FILE"
+          echo "" >> "$OUTPUT_FILE"
+          echo "# Remove existing address list entries" >> "$OUTPUT_FILE"
+          echo "/ip firewall address-list remove [find list=\"$LIST_NAME\"]" >> "$OUTPUT_FILE"
+          echo "" >> "$OUTPUT_FILE"
+          echo "# Add routes to address list" >> "$OUTPUT_FILE"
+          
+          # Process all-routes.txt and generate commands
+          while IFS= read -r line; do
+            if [ -n "$line" ]; then
+              route=$(echo "$line" | xargs)
+              if [[ "$route" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/[0-9]+$ ]]; then
+                echo "/ip firewall address-list add list=\"$LIST_NAME\" address=\"$route\" comment=\"whitelist-auto\"" >> "$OUTPUT_FILE"
+              fi
+            fi
+          done < all-routes.txt
+          
+          echo "" >> "$OUTPUT_FILE"
+          echo "# Script completed" >> "$OUTPUT_FILE"
+          
+          echo "Generated $OUTPUT_FILE with $(wc -l < all-routes.txt) routes"
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
@@ -73,11 +102,14 @@ jobs:
           git fetch origin main:main 2>/dev/null || true
           git checkout main 2>/dev/null || git checkout -b main
           
-          # Restore generated file
+          # Restore generated files
           mv all-routes-generated.txt all-routes.txt
+          cp mikrotik-whitelist.rsc mikrotik-whitelist-generated.rsc
+          git checkout main -- mikrotik-whitelist.rsc 2>/dev/null || true
+          mv mikrotik-whitelist-generated.rsc mikrotik-whitelist.rsc
           
           # Add and commit (git will detect if there are changes)
-          git add all-routes.txt
+          git add all-routes.txt mikrotik-whitelist.rsc
           if git diff --cached --quiet; then
             echo "No changes to all-routes.txt"
           else
