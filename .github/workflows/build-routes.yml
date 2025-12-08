@@ -53,7 +53,52 @@ jobs:
           sort -u all-routes.txt > all-routes-sorted.txt
           mv all-routes-sorted.txt all-routes.txt
           
-          echo "Generated all-routes.txt with $(wc -l < all-routes.txt) routes"
+          echo "Generated all-routes.txt with $(wc -l < all-routes.txt) routes before aggregation"
+          
+      - name: Aggregate routes (remove subnets covered by larger prefixes)
+        run: |
+          python3 << 'EOF'
+          import ipaddress
+          import sys
+          
+          # Read all prefixes
+          prefixes = []
+          with open('all-routes.txt', 'r') as f:
+              for line in f:
+                  line = line.strip()
+                  if line:
+                      try:
+                          prefixes.append(ipaddress.IPv4Network(line, strict=False))
+                      except ValueError:
+                          continue
+          
+          # Sort by prefix length (larger networks first, then smaller)
+          # This ensures we check larger networks first
+          prefixes.sort(key=lambda x: (x.prefixlen, int(x.network_address)))
+          
+          # Filter out subnets that are covered by larger prefixes
+          filtered = []
+          for prefix in prefixes:
+              is_covered = False
+              for larger in filtered:
+                  # Check if this prefix is a subnet of any already added prefix
+                  if larger.supernet_of(prefix):
+                      is_covered = True
+                      break
+              if not is_covered:
+                  filtered.append(prefix)
+          
+          # Write filtered prefixes back, sorted by network address
+          filtered.sort(key=lambda x: int(x.network_address))
+          with open('all-routes.txt', 'w') as f:
+              for prefix in filtered:
+                  f.write(str(prefix) + '\n')
+          
+          print(f"Aggregation complete: {len(prefixes)} -> {len(filtered)} routes")
+          print(f"Removed {len(prefixes) - len(filtered)} redundant subnets")
+          EOF
+          
+          echo "After aggregation: $(wc -l < all-routes.txt) routes"
 
       - name: Generate MikroTik .rsc file
         run: |
