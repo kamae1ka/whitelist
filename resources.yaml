@@ -1,15 +1,22 @@
 app:
   roblox:
-    - AS11281
-    - AS22697
-    - AS40021
-    - AS139229
-    - AS202318
+    as:
+      - AS11281
+      - AS22697
+      - AS40021
+      - AS139229
+      - AS202318
+    networks:
+      - 18.239.83.0/24
   youtube:
-    - AS15169
+    as:
+      - AS15169
   facebook:
-    - AS32934
+    as:
+      - AS32934
   instagram:
-    - AS32934
+    as:
+      - AS32934
   twitch:
-    - AS13414
+    as:
+      - AS13414

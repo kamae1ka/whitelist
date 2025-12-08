@@ -33,20 +33,64 @@ jobs:
           > all-routes.txt
           resources=$(yq eval '.app | keys | .[]' resources.yaml)
           for res in $resources; do
-            ass=$(yq eval ".app.$res[]" resources.yaml)
-            for as_str in $ass; do
-              # Extract AS number from format AS11281 -> 11281
-              asn=$(echo "$as_str" | sed 's/^AS//')
-              echo "Fetching AS $asn for $res"
-              cidrs=$(curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS$asn" | jq -r '.data.prefixes[]?.prefix // empty' | grep -v '^$' | grep -v ':' || true)
-              if [ -n "$cidrs" ]; then
-                for cidr in $cidrs; do
-                  echo "$cidr" >> all-routes.txt
+            echo "Processing $res..."
+            
+            # Check if resource has new structure (with 'as' and 'networks' keys)
+            has_as=$(yq eval ".app.$res.as" resources.yaml 2>/dev/null || echo "null")
+            has_networks=$(yq eval ".app.$res.networks" resources.yaml 2>/dev/null || echo "null")
+            
+            if [ "$has_as" != "null" ] || [ "$has_networks" != "null" ]; then
+              # New structure: app.name.as[] and app.name.networks[]
+              
+              # Process AS numbers
+              if [ "$has_as" != "null" ]; then
+                ass=$(yq eval ".app.$res.as[]" resources.yaml 2>/dev/null || echo "")
+                for as_str in $ass; do
+                  if [ -n "$as_str" ]; then
+                    # Extract AS number from format AS11281 -> 11281
+                    asn=$(echo "$as_str" | sed 's/^AS//')
+                    echo "  Fetching AS $asn for $res"
+                    cidrs=$(curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS$asn" | jq -r '.data.prefixes[]?.prefix // empty' | grep -v '^$' | grep -v ':' || true)
+                    if [ -n "$cidrs" ]; then
+                      for cidr in $cidrs; do
+                        echo "$cidr" >> all-routes.txt
+                      done
+                    else
+                      echo "  No IPv4 prefixes found for AS $asn"
+                    fi
+                  fi
                 done
-              else
-                echo "No IPv4 prefixes found for AS $asn"
               fi
-            done
+              
+              # Process custom networks
+              if [ "$has_networks" != "null" ]; then
+                networks=$(yq eval ".app.$res.networks[]" resources.yaml 2>/dev/null || echo "")
+                for network in $networks; do
+                  if [ -n "$network" ]; then
+                    echo "  Adding custom network: $network"
+                    echo "$network" >> all-routes.txt
+                  fi
+                done
+              fi
+            else
+              # Old structure: app.name[] (just list of AS)
+              ass=$(yq eval ".app.$res[]" resources.yaml 2>/dev/null || echo "")
+              for as_str in $ass; do
+                if [ -n "$as_str" ]; then
+                  # Extract AS number from format AS11281 -> 11281
+                  asn=$(echo "$as_str" | sed 's/^AS//')
+                  echo "  Fetching AS $asn for $res"
+                  cidrs=$(curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS$asn" | jq -r '.data.prefixes[]?.prefix // empty' | grep -v '^$' | grep -v ':' || true)
+                  if [ -n "$cidrs" ]; then
+                    for cidr in $cidrs; do
+                      echo "$cidr" >> all-routes.txt
+                    done
+                  else
+                    echo "  No IPv4 prefixes found for AS $asn"
+                  fi
+                fi
+              done
+            fi
           done
           
           # Sort and deduplicate routes
