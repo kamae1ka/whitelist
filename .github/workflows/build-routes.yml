@@ -35,12 +35,13 @@ jobs:
           for res in $resources; do
             echo "Processing $res..."
             
-            # Check if resource has new structure (with 'as' and 'networks' keys)
+            # Check if resource has new structure (with 'as', 'networks', or 'hosts' keys)
             has_as=$(yq eval ".app.$res.as" resources.yaml 2>/dev/null || echo "null")
             has_networks=$(yq eval ".app.$res.networks" resources.yaml 2>/dev/null || echo "null")
+            has_hosts=$(yq eval ".app.$res.hosts" resources.yaml 2>/dev/null || echo "null")
             
-            if [ "$has_as" != "null" ] || [ "$has_networks" != "null" ]; then
-              # New structure: app.name.as[] and app.name.networks[]
+            if [ "$has_as" != "null" ] || [ "$has_networks" != "null" ] || [ "$has_hosts" != "null" ]; then
+              # New structure: app.name.as[], app.name.networks[], and app.name.hosts[]
               
               # Process AS numbers
               if [ "$has_as" != "null" ]; then
@@ -57,6 +58,22 @@ jobs:
                       done
                     else
                       echo "  No IPv4 prefixes found for AS $asn"
+                    fi
+                  fi
+                done
+              fi
+              
+              # Process hosts (convert to /32 CIDR format)
+              if [ "$has_hosts" != "null" ]; then
+                hosts=$(yq eval ".app.$res.hosts[]" resources.yaml 2>/dev/null || echo "")
+                for host in $hosts; do
+                  if [ -n "$host" ]; then
+                    # Validate IP address format and convert to /32 CIDR
+                    if [[ "$host" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+                      echo "  Adding host: $host/32"
+                      echo "$host/32" >> all-routes.txt
+                    else
+                      echo "  Warning: Invalid IP address format: $host"
                     fi
                   fi
                 done
