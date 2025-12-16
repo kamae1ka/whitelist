@@ -1,4 +1,7 @@
 app:
+  work:
+    networks:
+      - 91.239.112.136/24
   hub_docker_com:
     hosts:
       - 44.221.37.199
