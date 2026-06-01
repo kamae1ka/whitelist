@@ -1,6 +1,6 @@
 # MikroTik RouterOS Script
 # Generated whitelist routes for Address List
-# Generated: 2026-05-18 09:31:55 UTC
+# Generated: 2026-06-01 07:59:24 UTC
 
 # Remove existing address list entries
 /ip firewall address-list remove [find list="whitelist-routes"]
@@ -26,7 +26,9 @@
 /ip firewall address-list add list="whitelist-routes" address="13.134.94.0/23" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.203.133.0/26" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.208.0.0/14" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="13.222.75.164/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.224.0.0/12" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="13.248.241.7/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.249.0.0/16" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="15.152.0.0/14" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="15.158.0.0/16" comment="whitelist-auto"
@@ -59,6 +61,11 @@
 /ip firewall address-list add list="whitelist-routes" address="31.13.24.0/21" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="31.13.64.0/18" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="31.220.96.0/21" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="32.192.173.213/32" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="32.194.241.243/32" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="32.195.116.17/32" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="32.195.255.208/32" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="32.198.148.213/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="34.0.0.0/15" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="34.2.0.0/16" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="34.3.3.0/24" comment="whitelist-auto"
@@ -250,6 +257,9 @@
 /ip firewall address-list add list="whitelist-routes" address="99.96.0.0/13" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="99.151.64.0/18" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="100.24.0.0/13" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="100.48.135.111/32" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="100.48.251.66/32" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="100.52.101.79/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="100.64.0.0/10" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="102.132.96.0/20" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="103.4.8.0/21" comment="whitelist-auto"
