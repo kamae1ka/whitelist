@@ -1,6 +1,6 @@
 # MikroTik RouterOS Script
 # Generated whitelist routes for Address List
-# Generated: 2026-06-01 07:59:24 UTC
+# Generated: 2026-06-06 13:02:14 UTC
 
 # Remove existing address list entries
 /ip firewall address-list remove [find list="whitelist-routes"]
@@ -26,9 +26,7 @@
 /ip firewall address-list add list="whitelist-routes" address="13.134.94.0/23" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.203.133.0/26" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.208.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.222.75.164/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.224.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.248.241.7/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="13.249.0.0/16" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="15.152.0.0/14" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="15.158.0.0/16" comment="whitelist-auto"
@@ -61,11 +59,6 @@
 /ip firewall address-list add list="whitelist-routes" address="31.13.24.0/21" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="31.13.64.0/18" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="31.220.96.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="32.192.173.213/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="32.194.241.243/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="32.195.116.17/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="32.195.255.208/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="32.198.148.213/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="34.0.0.0/15" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="34.2.0.0/16" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="34.3.3.0/24" comment="whitelist-auto"
@@ -118,6 +111,7 @@
 /ip firewall address-list add list="whitelist-routes" address="50.128.0.0/9" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="51.44.234.0/23" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="51.44.236.0/22" comment="whitelist-auto"
+/ip firewall address-list add list="whitelist-routes" address="51.68.155.228/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="51.75.54.119/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="51.77.51.230/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="51.158.24.199/32" comment="whitelist-auto"
@@ -257,9 +251,6 @@
 /ip firewall address-list add list="whitelist-routes" address="99.96.0.0/13" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="99.151.64.0/18" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="100.24.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="100.48.135.111/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="100.48.251.66/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="100.52.101.79/32" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="100.64.0.0/10" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="102.132.96.0/20" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="103.4.8.0/21" comment="whitelist-auto"
@@ -481,5 +472,32 @@
 /ip firewall address-list add list="whitelist-routes" address="217.216.62.0/24" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="217.216.64.0/22" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="217.216.80.0/20" comment="whitelist-auto"
+
+# Add domains (RouterOS resolves and updates by DNS TTL)
+/ip firewall address-list add list="whitelist-routes" address="reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img1.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img2.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img3.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img4.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img5.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img6.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img7.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img8.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img9.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img10.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img11.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="img12.reactor.cc" comment="reactor"
+/ip firewall address-list add list="whitelist-routes" address="api2.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="api3.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="api4.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="agent.api5.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="agentn.api5.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="agentn.global.api5.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="repo42.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="prod.authentication.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="authenticator.cursor.sh" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="marketplace.cursorapi.com" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="cursor-cdn.com" comment="cursor"
+/ip firewall address-list add list="whitelist-routes" address="downloads.cursor.com" comment="cursor"
 
 # Script completed
