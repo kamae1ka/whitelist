@@ -31,17 +31,19 @@ jobs:
       - name: Generate all-routes.txt
         run: |
           > all-routes.txt
+          > all-domains.txt
           resources=$(yq eval '.app | keys | .[]' resources.yaml)
           for res in $resources; do
             echo "Processing $res..."
             
-            # Check if resource has new structure (with 'as', 'networks', or 'hosts' keys)
+            # Check if resource has new structure (with 'as', 'networks', 'hosts', or 'domains' keys)
             has_as=$(yq eval ".app.$res.as" resources.yaml 2>/dev/null || echo "null")
             has_networks=$(yq eval ".app.$res.networks" resources.yaml 2>/dev/null || echo "null")
             has_hosts=$(yq eval ".app.$res.hosts" resources.yaml 2>/dev/null || echo "null")
+            has_domains=$(yq eval ".app.$res.domains" resources.yaml 2>/dev/null || echo "null")
             
-            if [ "$has_as" != "null" ] || [ "$has_networks" != "null" ] || [ "$has_hosts" != "null" ]; then
-              # New structure: app.name.as[], app.name.networks[], and app.name.hosts[]
+            if [ "$has_as" != "null" ] || [ "$has_networks" != "null" ] || [ "$has_hosts" != "null" ] || [ "$has_domains" != "null" ]; then
+              # New structure: app.name.as[], app.name.networks[], app.name.hosts[], app.name.domains[]
               
               # Process AS numbers
               if [ "$has_as" != "null" ]; then
@@ -86,6 +88,17 @@ jobs:
                   if [ -n "$network" ]; then
                     echo "  Adding custom network: $network"
                     echo "$network" >> all-routes.txt
+                  fi
+                done
+              fi
+
+              # Process domains (MikroTik resolves FQDN dynamically, not added to routes)
+              if [ "$has_domains" != "null" ]; then
+                domains=$(yq eval ".app.$res.domains[]" resources.yaml 2>/dev/null || echo "")
+                for domain in $domains; do
+                  if [ -n "$domain" ]; then
+                    echo "  Adding domain: $domain"
+                    echo "$domain|$res" >> all-domains.txt
                   fi
                 done
               fi
@@ -184,11 +197,25 @@ jobs:
               fi
             fi
           done < all-routes.txt
+
+          if [ -f all-domains.txt ] && [ -s all-domains.txt ]; then
+            echo "" >> "$OUTPUT_FILE"
+            echo "# Add domains (RouterOS resolves and updates by DNS TTL)" >> "$OUTPUT_FILE"
+            while IFS='|' read -r domain comment; do
+              if [ -n "$domain" ]; then
+                echo "/ip firewall address-list add list=\"$LIST_NAME\" address=\"$domain\" comment=\"$comment\"" >> "$OUTPUT_FILE"
+              fi
+            done < all-domains.txt
+          fi
           
           echo "" >> "$OUTPUT_FILE"
           echo "# Script completed" >> "$OUTPUT_FILE"
           
-          echo "Generated $OUTPUT_FILE with $(wc -l < all-routes.txt) routes"
+          domain_count=0
+          if [ -f all-domains.txt ]; then
+            domain_count=$(wc -l < all-domains.txt | xargs)
+          fi
+          echo "Generated $OUTPUT_FILE with $(wc -l < all-routes.txt) routes and $domain_count domains"
 
       - name: Commit and push changes
         run: |
