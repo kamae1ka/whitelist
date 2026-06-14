@@ -340,6 +340,9 @@ app:
   youtube:
     as:
       - AS15169
+    networks:
+      - 188.186.154.0/24
+      - 82.102.0.0/16
   chatgpt:
     networks:
       - 162.159.140.0/24

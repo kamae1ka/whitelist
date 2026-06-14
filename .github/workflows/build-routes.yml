@@ -178,10 +178,12 @@ jobs:
         run: |
           LIST_NAME="whitelist-routes"
           OUTPUT_FILE="mikrotik-whitelist.rsc"
+          GENERATED_TS=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
           
           echo "# MikroTik RouterOS Script" > "$OUTPUT_FILE"
           echo "# Generated whitelist routes for Address List" >> "$OUTPUT_FILE"
-          echo "# Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> "$OUTPUT_FILE"
+          echo "# Generated: $GENERATED_TS" >> "$OUTPUT_FILE"
+          printf '%s' "$GENERATED_TS" > mikrotik-whitelist.version
           echo "" >> "$OUTPUT_FILE"
           echo "# Remove existing address list entries" >> "$OUTPUT_FILE"
           echo "/ip firewall address-list remove [find list=\"$LIST_NAME\"]" >> "$OUTPUT_FILE"
@@ -238,11 +240,11 @@ jobs:
           # Restore generated files
           mv all-routes-generated.txt all-routes.txt
           cp mikrotik-whitelist.rsc mikrotik-whitelist-generated.rsc
-          git checkout main -- mikrotik-whitelist.rsc 2>/dev/null || true
+          git checkout main -- mikrotik-whitelist.rsc mikrotik-whitelist.version 2>/dev/null || true
           mv mikrotik-whitelist-generated.rsc mikrotik-whitelist.rsc
           
           # Add and commit (git will detect if there are changes)
-          git add all-routes.txt mikrotik-whitelist.rsc
+          git add all-routes.txt mikrotik-whitelist.rsc mikrotik-whitelist.version
           if git diff --cached --quiet; then
             echo "No changes to all-routes.txt"
           else

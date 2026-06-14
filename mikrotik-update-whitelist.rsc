@@ -1,14 +1,18 @@
-# MikroTik RouterOS 7 Script - Simple version
-# Downloads mikrotik-whitelist.rsc from GitHub and imports it
+# MikroTik RouterOS 7 - Whitelist auto-updater installer
+# Import once: /import file-name=mikrotik-update-whitelist.rsc
+#
+# Requires: whitelist-update.script on router (downloaded automatically)
+# Status:   /system script print where name=whitelist-update
+# State:    /file print file=whitelist-state.txt
 
-:local fileName "mikrotik-whitelist.rsc"
+/system script remove [find name=whitelist-update]
+/system scheduler remove [find name=whitelist-update-hourly]
+/file remove [find name=whitelist-update.script]
 
-# Download file
-/tool fetch url="https://raw.githubusercontent.com/kamae1ka/whitelist/main/mikrotik-whitelist.rsc" mode=https dst-path=$fileName
+/tool fetch url="https://raw.githubusercontent.com/kamae1ka/whitelist/main/whitelist-update.script" mode=https dst-path=whitelist-update.script
 
-# Import the script (it will remove old entries and add new ones)
-/import file-name=$fileName
+/system script add name=whitelist-update owner=admin policy=read,write,policy,test source=[/file get whitelist-update.script contents]
 
-# Cleanup
-/file remove $fileName
-:put "Whitelist updated successfully"
+/system scheduler add name=whitelist-update-hourly interval=1h start-time=startup on-event=whitelist-update comment="Auto-update whitelist from GitHub (hourly)"
+
+/system script run whitelist-update
