@@ -1,5 +1,5 @@
 # Whitelist auto-updater (RouterOS 7)
-# Do not read mikrotik-whitelist.rsc into memory - use mikrotik-whitelist.version instead
+# /import interrupts the caller - import runs via whitelist-do-import script
 
 :local versionUrl "https://raw.githubusercontent.com/kamae1ka/whitelist/main/mikrotik-whitelist.version"
 :local whitelistUrl "https://raw.githubusercontent.com/kamae1ka/whitelist/main/mikrotik-whitelist.rsc"
@@ -11,9 +11,12 @@
 :set now ($now . " " . [/system clock get time])
 
 :local savedGen ""
+:local savedSize "0"
 :local lastUpdate "never"
 :local status "started"
 :local newGen ""
+:local newSize "0"
+:local needImport 0
 
 :local stateId [/file find name=$stateFile]
 :if ([:len $stateId] > 0) do={
@@ -25,6 +28,14 @@
     :local e [:find $sc ";" $s]
     :if ($e < 0) do={ :set e [:len $sc] }
     :set savedGen [:pick $sc $s $e]
+  }
+  :set key "remote_size="
+  :set p [:find $sc $key]
+  :if ($p >= 0) do={
+    :local s ($p + [:len $key])
+    :local e [:find $sc ";" $s]
+    :if ($e < 0) do={ :set e [:len $sc] }
+    :set savedSize [:pick $sc $s $e]
   }
   :set key "last_update="
   :set p [:find $sc $key]
@@ -44,52 +55,98 @@
 /tool fetch url=$versionUrl mode=https dst-path=$versionFile
 :delay 3s
 
-:local fetchOk 0
 :local versionId [/file find name=$versionFile]
 :if ([:len $versionId] > 0) do={
-  :set fetchOk 1
   :set newGen [/file get $versionId contents]
   :if ([:len $newGen] > 23) do={
     :set newGen [:pick $newGen 0 23]
   }
+  /file remove $versionFile
 }
 
-:if ($fetchOk = 0) do={
-  :set status "fetch_failed"
-  :log error "whitelist: version fetch failed"
-}
-
-:if ($fetchOk = 1) do={
+:if ([:len $newGen] > 0) do={
   :if (($savedGen = "") or ($newGen != $savedGen)) do={
-    :log info ("whitelist: update " . $savedGen . " -> " . $newGen)
-    /tool fetch url=$whitelistUrl mode=https dst-path=$whitelistFile
-    :delay 10s
-    :local wlId [/file find name=$whitelistFile]
-    :if ([:len $wlId] = 0) do={
-      :set status "fetch_failed"
-      :log error "whitelist: whitelist fetch failed"
-    }
-    :if ([:len $wlId] > 0) do={
-      /import file-name=$whitelistFile
-      :set lastUpdate $newGen
-      :set status "updated"
-      :log info "whitelist: import ok"
-      /file remove $whitelistFile
-    }
+    :set needImport 1
+    :log info ("whitelist: version changed " . $savedGen . " -> " . $newGen)
   }
   :if (($savedGen != "") and ($newGen = $savedGen)) do={
     :set status "no_changes"
     :log info "whitelist: no changes"
   }
-  /file remove $versionFile
 }
 
-:local stateContent ("last_check=" . $now . ";last_update=" . $lastUpdate . ";remote_generated=" . $newGen . ";status=" . $status)
-:if ([:len $stateId] = 0) do={
-  /file add name=$stateFile
-  :set stateId [/file find name=$stateFile]
+:if ($needImport = 0) do={
+  :if ([:len $newGen] = 0) do={
+    :log warning "whitelist: version file missing, using size check"
+    /tool fetch url=$whitelistUrl mode=https dst-path=$whitelistFile
+    :delay 10s
+    :local wlId [/file find name=$whitelistFile]
+    :if ([:len $wlId] > 0) do={
+      :set newSize [:tostr [/file get $wlId size]]
+      :if (($savedSize = "0") or ($newSize != $savedSize)) do={
+        :set needImport 1
+        :log info ("whitelist: size changed " . $savedSize . " -> " . $newSize)
+      }
+      :if (($savedSize != "0") and ($newSize = $savedSize)) do={
+        :set status "no_changes"
+        :log info "whitelist: no changes (size)"
+        /file remove $whitelistFile
+      }
+    }
+    :if ([:len $wlId] = 0) do={
+      :set status "fetch_failed"
+      :log error "whitelist: whitelist fetch failed"
+    }
+  }
 }
-/file set $stateId contents=$stateContent
 
-:local scriptId [/system script find name=whitelist-update]
-/system script set $scriptId comment=("last: " . $now . " | gen: " . $newGen . " | " . $status)
+:if ($needImport = 1) do={
+  :if ([:len [/file find name=$whitelistFile]] = 0) do={
+    /tool fetch url=$whitelistUrl mode=https dst-path=$whitelistFile
+    :delay 10s
+  }
+  :local wlId [/file find name=$whitelistFile]
+  :if ([:len $wlId] = 0) do={
+    :set status "fetch_failed"
+    :log error "whitelist: whitelist fetch failed"
+  }
+  :if ([:len $wlId] > 0) do={
+    :if ($newSize = "0") do={
+      :set newSize [:tostr [/file get $wlId size]]
+    }
+    :if ([:len $newGen] > 0) do={
+      :set lastUpdate $newGen
+    }
+    :if ([:len $newGen] = 0) do={
+      :set lastUpdate ("size:" . $newSize)
+    }
+    :set status "updated"
+    :set savedGen $newGen
+    :set savedSize $newSize
+    :local stateContent ("last_check=" . $now . ";last_update=" . $lastUpdate . ";remote_generated=" . $newGen . ";remote_size=" . $newSize . ";status=" . $status)
+    :if ([:len $stateId] = 0) do={
+      /file add name=$stateFile
+      :set stateId [/file find name=$stateFile]
+    }
+    /file set $stateId contents=$stateContent
+    :local scriptId [/system script find name=whitelist-update]
+    :if ([:len $scriptId] > 0) do={
+      /system script set $scriptId comment=("last: " . $now . " | " . $lastUpdate . " | importing")
+    }
+    /system script run whitelist-do-import
+    :log info "whitelist: import triggered"
+  }
+}
+
+:if ($needImport = 0) do={
+  :local stateContent ("last_check=" . $now . ";last_update=" . $lastUpdate . ";remote_generated=" . $savedGen . ";remote_size=" . $savedSize . ";status=" . $status)
+  :if ([:len $stateId] = 0) do={
+    /file add name=$stateFile
+    :set stateId [/file find name=$stateFile]
+  }
+  /file set $stateId contents=$stateContent
+  :local scriptId [/system script find name=whitelist-update]
+  :if ([:len $scriptId] > 0) do={
+    /system script set $scriptId comment=("last: " . $now . " | " . $lastUpdate . " | " . $status)
+  }
+}

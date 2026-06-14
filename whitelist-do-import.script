@@ -1,0 +1,10 @@
+# Runs /import separately - import interrupts the calling script
+:local whitelistFile "mikrotik-whitelist.new.rsc"
+:local wlId [/file find name=$whitelistFile]
+:if ([:len $wlId] = 0) do={
+  :log error "whitelist: import file missing"
+} else={
+  /import file-name=$whitelistFile
+  /file remove $whitelistFile
+  :log info "whitelist: import done"
+}
