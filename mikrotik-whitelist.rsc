@@ -2,9 +2,7 @@
 # Generated whitelist routes for Address List
 # Generated: 2026-06-14 07:30:53 UTC
 
-# Remove existing address list entries
-/ip firewall address-list remove [find list="whitelist-routes"]
-
+# Address-list cleanup is done by whitelist-do-import script before import
 # Add routes to address list
 /ip firewall address-list add list="whitelist-routes" address="2.0.0.0/7" comment="whitelist-auto"
 /ip firewall address-list add list="whitelist-routes" address="4.209.0.0/16" comment="whitelist-auto"

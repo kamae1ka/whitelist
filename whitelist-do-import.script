@@ -1,10 +1,24 @@
-# Runs /import separately - import interrupts the calling script
+# Safe import: bulk remove races with dynamic DNS entries (no such item)
 :local whitelistFile "mikrotik-whitelist.new.rsc"
+:local listName "whitelist-routes"
+
+:log info "whitelist: clearing address-list"
+:while ([:len [/ip firewall address-list find list=$listName]] > 0) do={
+  :foreach id in=[/ip firewall address-list find list=$listName] do={
+    :do { /ip firewall address-list remove $id } on-error={}
+  }
+}
+
 :local wlId [/file find name=$whitelistFile]
 :if ([:len $wlId] = 0) do={
   :log error "whitelist: import file missing"
 } else={
-  /import file-name=$whitelistFile
+  :log info "whitelist: importing routes"
+  :do {
+    /import file-name=$whitelistFile
+  } on-error={
+    :log error "whitelist: import failed"
+  }
   /file remove $whitelistFile
-  :log info "whitelist: import done"
+  :log info ("whitelist: import done, entries: " . [:len [/ip firewall address-list find list=$listName]])
 }
