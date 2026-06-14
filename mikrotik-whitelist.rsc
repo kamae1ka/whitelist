@@ -1,6 +1,6 @@
 # MikroTik RouterOS Script
 # Generated whitelist routes for Address List
-# Generated: 2026-06-14 07:35:58 UTC
+# Generated: 2026-06-14 07:41:07 UTC
 
 # Address-list cleanup is done by whitelist-do-import script before import
 # Add routes to address list
