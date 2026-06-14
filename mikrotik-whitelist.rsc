@@ -4,500 +4,500 @@
 
 # Address-list cleanup is done by whitelist-do-import script before import
 # Add routes to address list
-/ip firewall address-list add list="whitelist-routes" address="2.0.0.0/7" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="4.209.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="5.178.43.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="5.180.151.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="5.252.52.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="5.252.54.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="8.6.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="8.8.4.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="8.8.8.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="8.32.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.32.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.48.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.56.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.59.250.0/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.112.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.124.199.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.134.24.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.134.94.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.203.133.0/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.208.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.224.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="13.249.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.152.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.158.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.160.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.168.0.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.176.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.188.184.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.196.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.207.13.128/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.207.213.128/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="15.235.73.249/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="16.12.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="16.15.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="16.162.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="16.170.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="16.182.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="18.64.0.0/10" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="18.128.0.0/9" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="20.201.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.2.13.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.16.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.32.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.64.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.72.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.91.0.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.173.192.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.192.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="23.228.220.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="24.110.32.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="31.13.24.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="31.13.64.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="31.220.96.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.0.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.2.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.3.3.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.3.16.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.3.32.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.3.64.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.4.4.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.4.16.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.4.32.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.4.64.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.4.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.5.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.64.0.0/10" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.188.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.189.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.190.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.191.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="34.192.0.0/10" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.71.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.72.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.80.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.152.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.160.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.176.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.206.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.208.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.212.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="35.216.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="36.103.232.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="36.103.232.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="38.105.209.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="38.105.232.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="40.0.0.0/8" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="43.175.236.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="43.200.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="43.218.56.64/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="43.218.56.128/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="43.218.71.0/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="44.192.0.0/10" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="45.64.40.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="45.137.192.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="45.137.194.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="46.51.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="47.129.82.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="47.129.84.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="49.13.126.112/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="49.13.137.12/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="49.13.213.222/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="50.16.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="50.128.0.0/9" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.44.234.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.44.236.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.68.155.228/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.75.54.119/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.77.51.230/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.158.24.199/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="51.158.25.7/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="52.0.0.0/8" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.64.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.144.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.160.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.192.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.224.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.240.128.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="54.244.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="56.125.46.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="56.125.48.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.140.192.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.0.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.1.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.2.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.3.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.4.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.5.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.6.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.7.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.8.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.9.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.10.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.11.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.12.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.13.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.14.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.15.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.16.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.17.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.18.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.19.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.20.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.141.21.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.144.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="57.180.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="58.254.138.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="58.254.138.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="62.146.168.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="62.146.176.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="62.146.224.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="62.152.42.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="63.32.0.0/11" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="64.63.0.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="64.124.0.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="64.125.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="64.233.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="64.252.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="65.0.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="65.8.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.22.228.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.96.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.104.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.112.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.116.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.118.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.119.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.94.120.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.102.0.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.220.144.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="66.249.64.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="67.202.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="68.232.32.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="69.63.176.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="69.171.224.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="69.195.160.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="70.32.128.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="70.132.0.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="70.224.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="71.152.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="72.14.192.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="72.44.32.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="72.145.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="72.246.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="74.114.24.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="74.119.76.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="74.125.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="75.101.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="76.223.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="80.239.138.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="80.239.150.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="81.22.38.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="82.102.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="82.197.64.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="85.239.230.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="85.239.232.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="85.239.240.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="85.239.248.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="85.239.250.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="86.48.16.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="86.48.20.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="86.48.24.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="86.48.28.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="87.119.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="88.198.157.228/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="88.221.92.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="88.221.128.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="88.221.168.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="89.117.16.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="89.117.72.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="89.117.144.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.105.192.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.108.4.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.108.8.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.108.12.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.108.16.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.108.20.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.108.56.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="91.239.112.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="92.118.56.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="92.118.58.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="92.122.16.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="92.123.96.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="92.123.132.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="92.123.184.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="93.184.220.70/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="93.186.137.128/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="93.191.15.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="94.72.112.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="94.72.120.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="94.101.113.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.100.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.101.20.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.101.60.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.101.72.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.101.116.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.101.132.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.101.148.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.161.64.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="95.217.246.135/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="98.80.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="99.48.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="99.79.169.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="99.80.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="99.96.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="99.151.64.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="100.24.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="100.64.0.0/10" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="102.132.96.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.4.8.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.4.96.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.8.192.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.140.28.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.142.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.246.148.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.246.152.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.252.112.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="103.252.114.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="104.16.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="104.64.0.0/10" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="104.244.40.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="107.16.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="108.128.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="108.156.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="108.170.192.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="108.177.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="109.236.60.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="111.13.171.128/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="111.13.185.32/27" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="111.13.185.64/27" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="116.129.226.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="116.129.226.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="118.193.97.64/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="118.193.97.128/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="119.147.182.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="119.147.182.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.52.12.64/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.52.39.128/27" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.52.153.192/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.232.236.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.232.236.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.253.240.192/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.253.241.160/27" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.253.245.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="120.253.245.192/27" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="128.75.224.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="128.101.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="128.116.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="129.134.0.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="130.176.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="136.22.160.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="136.22.176.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="136.22.184.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="136.22.186.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="136.23.48.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="138.201.117.10/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="140.179.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="141.101.64.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="141.193.3.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="142.234.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="142.250.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="143.204.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="144.126.128.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="144.126.144.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="144.126.148.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="144.126.152.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="144.220.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="146.75.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="147.93.0.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="147.93.128.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="147.93.144.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="147.93.150.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="147.93.176.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="149.72.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="149.154.160.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="150.222.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="151.101.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="152.65.208.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="152.65.214.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="152.65.218.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="152.65.222.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="152.65.224.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="152.199.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.12.224.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.12.232.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.12.240.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.12.248.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.12.252.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.38.160.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.38.168.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.38.176.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.38.184.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.53.32.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.53.40.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.53.48.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="154.53.56.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="155.133.240.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="157.173.192.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="157.174.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="157.240.0.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="157.240.192.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="160.1.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="160.72.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="161.178.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="162.120.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="162.158.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="162.213.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="163.47.16.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="163.70.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="163.77.132.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="163.77.136.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="163.181.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="164.5.254.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="167.172.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="168.245.0.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="172.64.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="172.96.96.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="172.110.32.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="172.217.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="172.253.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="173.194.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="173.222.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="173.252.64.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="173.252.96.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="174.128.0.0/12" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="176.32.0.0/14" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="176.57.165.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="177.71.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="177.72.240.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="177.73.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="177.75.0.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="178.236.0.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="179.60.192.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="180.163.57.0/25" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="180.163.57.128/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="184.24.0.0/13" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="184.50.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="185.60.216.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="185.76.151.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="185.89.216.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="185.111.156.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="185.187.235.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="185.199.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="188.43.72.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="188.64.224.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="188.114.98.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="188.114.99.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="188.165.211.229/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="188.186.154.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="192.104.160.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="192.133.76.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="192.178.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="192.229.220.133/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="192.229.233.50/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="193.70.94.47/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="193.186.4.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="194.113.67.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="194.140.196.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="194.238.24.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="195.26.240.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="195.26.248.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="198.41.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.16.156.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.36.154.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.36.156.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.59.148.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.59.243.223/32" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.96.56.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="199.232.0.0/16" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="202.160.128.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="202.160.129.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="202.160.130.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="202.160.131.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.9.184.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.13.168.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.13.172.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.13.174.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.15.20.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.246.164.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.246.168.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="204.246.176.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.201.62.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.233.0.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.202.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.204.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.208.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.249.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.250.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.252.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="205.251.254.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="207.223.160.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="207.244.224.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="207.244.240.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="208.68.108.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="208.78.0.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="208.184.0.0/15" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.85.128.0/17" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.126.0.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.126.70.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.126.77.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.126.79.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.126.80.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.145.48.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.206.40.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="209.237.192.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.28.176.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.28.184.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.56.32.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.56.36.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.56.40.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.95.165.0/26" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="212.188.39.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="213.155.157.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.51.64.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.58.192.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.73.80.0/20" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.137.32.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.198.0.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.200.192.0/18" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.239.32.0/19" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.252.220.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="216.252.222.0/23" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.77.0.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.77.8.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.216.40.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.216.48.0/21" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.216.62.0/24" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.216.64.0/22" comment="whitelist-auto"
-/ip firewall address-list add list="whitelist-routes" address="217.216.80.0/20" comment="whitelist-auto"
+:do { /ip firewall address-list add list="whitelist-routes" address="2.0.0.0/7" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="4.209.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="5.178.43.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="5.180.151.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="5.252.52.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="5.252.54.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="8.6.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="8.8.4.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="8.8.8.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="8.32.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.32.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.48.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.56.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.59.250.0/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.112.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.124.199.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.134.24.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.134.94.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.203.133.0/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.208.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.224.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.249.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.152.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.158.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.160.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.168.0.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.176.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.188.184.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.196.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.207.13.128/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.207.213.128/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="15.235.73.249/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="16.12.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="16.15.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="16.162.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="16.170.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="16.182.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="18.64.0.0/10" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="18.128.0.0/9" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="20.201.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.2.13.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.16.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.32.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.64.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.72.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.91.0.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.173.192.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.192.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="23.228.220.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="24.110.32.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="31.13.24.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="31.13.64.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="31.220.96.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.0.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.2.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.3.3.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.3.16.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.3.32.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.3.64.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.4.4.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.4.16.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.4.32.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.4.64.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.4.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.5.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.64.0.0/10" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.188.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.189.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.190.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.191.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="34.192.0.0/10" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.71.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.72.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.80.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.152.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.160.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.176.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.206.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.208.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.212.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="35.216.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="36.103.232.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="36.103.232.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="38.105.209.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="38.105.232.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="40.0.0.0/8" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="43.175.236.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="43.200.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="43.218.56.64/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="43.218.56.128/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="43.218.71.0/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="44.192.0.0/10" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="45.64.40.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="45.137.192.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="45.137.194.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="46.51.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="47.129.82.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="47.129.84.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="49.13.126.112/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="49.13.137.12/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="49.13.213.222/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="50.16.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="50.128.0.0/9" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.44.234.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.44.236.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.68.155.228/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.75.54.119/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.77.51.230/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.158.24.199/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="51.158.25.7/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="52.0.0.0/8" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.64.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.144.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.160.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.192.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.224.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.240.128.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="54.244.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="56.125.46.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="56.125.48.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.140.192.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.0.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.1.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.2.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.3.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.4.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.5.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.6.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.7.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.8.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.9.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.10.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.11.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.12.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.13.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.14.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.15.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.16.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.17.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.18.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.19.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.20.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.21.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.144.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.180.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="58.254.138.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="58.254.138.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="62.146.168.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="62.146.176.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="62.146.224.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="62.152.42.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="63.32.0.0/11" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="64.63.0.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="64.124.0.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="64.125.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="64.233.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="64.252.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="65.0.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="65.8.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.22.228.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.96.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.104.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.112.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.116.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.118.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.119.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.94.120.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.102.0.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.220.144.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="66.249.64.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="67.202.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="68.232.32.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="69.63.176.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="69.171.224.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="69.195.160.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="70.32.128.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="70.132.0.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="70.224.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="71.152.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="72.14.192.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="72.44.32.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="72.145.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="72.246.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="74.114.24.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="74.119.76.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="74.125.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="75.101.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="76.223.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="80.239.138.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="80.239.150.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="81.22.38.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="82.102.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="82.197.64.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="85.239.230.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="85.239.232.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="85.239.240.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="85.239.248.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="85.239.250.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="86.48.16.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="86.48.20.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="86.48.24.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="86.48.28.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="87.119.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="88.198.157.228/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="88.221.92.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="88.221.128.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="88.221.168.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="89.117.16.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="89.117.72.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="89.117.144.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.105.192.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.108.4.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.108.8.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.108.12.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.108.16.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.108.20.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.108.56.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="91.239.112.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="92.118.56.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="92.118.58.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="92.122.16.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="92.123.96.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="92.123.132.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="92.123.184.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="93.184.220.70/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="93.186.137.128/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="93.191.15.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="94.72.112.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="94.72.120.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="94.101.113.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.100.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.101.20.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.101.60.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.101.72.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.101.116.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.101.132.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.101.148.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.161.64.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="95.217.246.135/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="98.80.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="99.48.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="99.79.169.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="99.80.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="99.96.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="99.151.64.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="100.24.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="100.64.0.0/10" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="102.132.96.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.4.8.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.4.96.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.8.192.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.140.28.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.142.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.246.148.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.246.152.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.252.112.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="103.252.114.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="104.16.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="104.64.0.0/10" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="104.244.40.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="107.16.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="108.128.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="108.156.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="108.170.192.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="108.177.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="109.236.60.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="111.13.171.128/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="111.13.185.32/27" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="111.13.185.64/27" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="116.129.226.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="116.129.226.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="118.193.97.64/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="118.193.97.128/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="119.147.182.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="119.147.182.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.52.12.64/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.52.39.128/27" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.52.153.192/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.232.236.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.232.236.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.253.240.192/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.253.241.160/27" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.253.245.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="120.253.245.192/27" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="128.75.224.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="128.101.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="128.116.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="129.134.0.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="130.176.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="136.22.160.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="136.22.176.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="136.22.184.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="136.22.186.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="136.23.48.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="138.201.117.10/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="140.179.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="141.101.64.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="141.193.3.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="142.234.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="142.250.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="143.204.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="144.126.128.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="144.126.144.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="144.126.148.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="144.126.152.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="144.220.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="146.75.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="147.93.0.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="147.93.128.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="147.93.144.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="147.93.150.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="147.93.176.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="149.72.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="149.154.160.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="150.222.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="151.101.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="152.65.208.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="152.65.214.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="152.65.218.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="152.65.222.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="152.65.224.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="152.199.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.12.224.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.12.232.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.12.240.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.12.248.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.12.252.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.38.160.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.38.168.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.38.176.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.38.184.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.53.32.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.53.40.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.53.48.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="154.53.56.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="155.133.240.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="157.173.192.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="157.174.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="157.240.0.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="157.240.192.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="160.1.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="160.72.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="161.178.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="162.120.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="162.158.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="162.213.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="163.47.16.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="163.70.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="163.77.132.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="163.77.136.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="163.181.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="164.5.254.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="167.172.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="168.245.0.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="172.64.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="172.96.96.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="172.110.32.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="172.217.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="172.253.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="173.194.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="173.222.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="173.252.64.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="173.252.96.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="174.128.0.0/12" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="176.32.0.0/14" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="176.57.165.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="177.71.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="177.72.240.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="177.73.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="177.75.0.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="178.236.0.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="179.60.192.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="180.163.57.0/25" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="180.163.57.128/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="184.24.0.0/13" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="184.50.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="185.60.216.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="185.76.151.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="185.89.216.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="185.111.156.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="185.187.235.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="185.199.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="188.43.72.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="188.64.224.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="188.114.98.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="188.114.99.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="188.165.211.229/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="188.186.154.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="192.104.160.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="192.133.76.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="192.178.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="192.229.220.133/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="192.229.233.50/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="193.70.94.47/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="193.186.4.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="194.113.67.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="194.140.196.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="194.238.24.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="195.26.240.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="195.26.248.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="198.41.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.16.156.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.36.154.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.36.156.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.59.148.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.59.243.223/32" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.96.56.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="199.232.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="202.160.128.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="202.160.129.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="202.160.130.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="202.160.131.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.9.184.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.13.168.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.13.172.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.13.174.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.15.20.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.246.164.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.246.168.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="204.246.176.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.201.62.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.233.0.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.202.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.204.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.208.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.249.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.250.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.252.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="205.251.254.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="207.223.160.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="207.244.224.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="207.244.240.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="208.68.108.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="208.78.0.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="208.184.0.0/15" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.85.128.0/17" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.126.0.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.126.70.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.126.77.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.126.79.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.126.80.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.145.48.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.206.40.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="209.237.192.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.28.176.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.28.184.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.56.32.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.56.36.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.56.40.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.95.165.0/26" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="212.188.39.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="213.155.157.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.51.64.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.58.192.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.73.80.0/20" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.137.32.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.198.0.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.200.192.0/18" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.239.32.0/19" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.252.220.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="216.252.222.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.77.0.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.77.8.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.216.40.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.216.48.0/21" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.216.62.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.216.64.0/22" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="217.216.80.0/20" comment="whitelist-auto" } on-error={}
 
 # Add domains (RouterOS resolves and updates by DNS TTL)
-/ip firewall address-list add list="whitelist-routes" address="reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img1.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img2.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img3.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img4.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img5.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img6.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img7.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img8.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img9.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img10.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img11.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="img12.reactor.cc" comment="reactor"
-/ip firewall address-list add list="whitelist-routes" address="api2.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="api3.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="api4.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="agent.api5.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="agentn.api5.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="agentn.global.api5.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="repo42.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="prod.authentication.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="authenticator.cursor.sh" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="marketplace.cursorapi.com" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="cursor-cdn.com" comment="cursor"
-/ip firewall address-list add list="whitelist-routes" address="downloads.cursor.com" comment="cursor"
+:do { /ip firewall address-list add list="whitelist-routes" address="reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img1.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img2.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img3.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img4.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img5.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img6.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img7.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img8.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img9.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img10.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img11.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="img12.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="api2.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="api3.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="api4.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="agent.api5.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="agentn.api5.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="agentn.global.api5.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="repo42.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="prod.authentication.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="authenticator.cursor.sh" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="marketplace.cursorapi.com" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="cursor-cdn.com" comment="cursor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="downloads.cursor.com" comment="cursor" } on-error={}
 
 # Script completed
