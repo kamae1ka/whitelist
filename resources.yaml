@@ -9,6 +9,8 @@ app:
       - "*.rutracker.org"
       - rutracker.net
       - "*.rutracker.net"
+      - rutrk.org
+      - "*.rutrk.org"
   work:
     domains:
       - hydra.sh
