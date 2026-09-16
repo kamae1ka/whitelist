@@ -31,7 +31,9 @@ app:
   rutracker:
     hosts:
       - 104.21.32.39
+      - 104.21.50.150
       - 172.67.182.196
+      - 172.67.163.237
   work:
     networks:
       - 91.239.112.136/24
@@ -340,9 +342,51 @@ app:
   youtube:
     as:
       - AS15169
+    # Apex FQDNs + masks for dynamic CDN hosts (googlevideo/ytimg/ggpht).
+    # Needed for MikroTik FQDN / Clash DOMAIN routing; AS15169 does not cover all caches.
+    domains:
+      - youtube.com
+      - youtu.be
+      - youtube-nocookie.com
+      - youtubekids.com
+      - youtubei.googleapis.com
+      - youtube.googleapis.com
+      - youtubeembeddedplayer.googleapis.com
+      - googlevideo.com
+      - ytimg.com
+      - ggpht.com
+      - yt3.googleusercontent.com
+      - "*.youtube.com"
+      - "*.youtube-nocookie.com"
+      - "*.youtubekids.com"
+      - "*.googlevideo.com"
+      - "*.ytimg.com"
+      - "*.ggpht.com"
     networks:
       - 188.186.154.0/24
       - 82.102.0.0/16
+  google_meet:
+    # Official: https://support.google.com/a/answer/1279090
+    # Signaling/UI + TURN SNI. Media IPs overlap AS15169 (youtube),
+    # but domains are needed for MikroTik FQDN / Clash DOMAIN routing.
+    # UDP 3478 and 19302-19309 must be allowed on the VPN path.
+    domains:
+      - meet.google.com
+      - stream.meet.google.com
+      - meetings.googleapis.com
+      - hangouts.googleapis.com
+      - meetings.clients6.google.com
+      - workspace.turns.goog
+      - meet.turns.goog
+      - stun.l.google.com
+      - stun1.l.google.com
+      - stun2.l.google.com
+      - stun3.l.google.com
+      - stun4.l.google.com
+    networks:
+      - 74.125.250.0/24
+      - 74.125.247.128/32
+      - 142.250.82.0/24
   chatgpt:
     networks:
       - 162.159.140.0/24
