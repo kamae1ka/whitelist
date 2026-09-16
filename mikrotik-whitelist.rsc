@@ -1,6 +1,6 @@
 # MikroTik RouterOS Script
 # Generated whitelist routes for Address List
-# Generated: 2026-06-14 07:41:07 UTC
+# Generated: 2026-09-16 19:03:17 UTC
 
 # Address-list cleanup is done by whitelist-do-import script before import
 # Add routes to address list
@@ -22,6 +22,7 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="13.124.199.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="13.134.24.0/23" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="13.134.94.0/23" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="13.140.32.0/20" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="13.203.133.0/26" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="13.208.0.0/14" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="13.224.0.0/12" comment="whitelist-auto" } on-error={}
@@ -126,27 +127,23 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="56.125.48.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.140.192.0/18" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.0.0/24" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="57.141.1.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.2.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.3.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.4.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.5.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.6.0/24" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="57.141.7.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.8.0/24" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="57.141.9.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.10.0/24" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="57.141.11.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.12.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.13.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.14.0/24" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="57.141.15.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.16.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.17.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.18.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.19.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.141.20.0/24" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="57.141.21.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.22.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="57.141.24.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.144.0.0/14" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="57.180.0.0/14" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="58.254.138.0/25" comment="whitelist-auto" } on-error={}
@@ -178,7 +175,6 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="68.232.32.0/20" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="69.63.176.0/20" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="69.171.224.0/19" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="69.195.160.0/19" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="70.32.128.0/19" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="70.132.0.0/18" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="70.224.0.0/13" comment="whitelist-auto" } on-error={}
@@ -192,6 +188,7 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="74.125.0.0/16" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="75.101.128.0/17" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="76.223.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="80.190.72.0/21" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="80.239.138.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="80.239.150.0/25" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="81.22.38.0/24" comment="whitelist-auto" } on-error={}
@@ -297,6 +294,7 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="136.22.176.0/21" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="136.22.184.0/23" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="136.22.186.0/24" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="136.23.39.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="136.23.48.0/20" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="138.201.117.10/32" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="140.179.0.0/16" comment="whitelist-auto" } on-error={}
@@ -412,6 +410,7 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="199.59.243.223/32" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="199.96.56.0/23" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="199.232.0.0/16" comment="whitelist-auto" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="200.226.0.0/16" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="202.160.128.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="202.160.129.0/24" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="202.160.130.0/24" comment="whitelist-auto" } on-error={}
@@ -447,7 +446,6 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="209.126.80.0/21" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="209.145.48.0/20" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="209.206.40.0/21" comment="whitelist-auto" } on-error={}
-:do { /ip firewall address-list add list="whitelist-routes" address="209.237.192.0/19" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="212.28.176.0/21" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="212.28.184.0/21" comment="whitelist-auto" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="212.56.32.0/22" comment="whitelist-auto" } on-error={}
@@ -487,6 +485,35 @@
 :do { /ip firewall address-list add list="whitelist-routes" address="img10.reactor.cc" comment="reactor" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="img11.reactor.cc" comment="reactor" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="img12.reactor.cc" comment="reactor" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtube.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtu.be" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtube-nocookie.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtubekids.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtubei.googleapis.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtube.googleapis.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="youtubeembeddedplayer.googleapis.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="googlevideo.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="ytimg.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="ggpht.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="yt3.googleusercontent.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="*.youtube.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="*.youtube-nocookie.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="*.youtubekids.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="*.googlevideo.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="*.ytimg.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="*.ggpht.com" comment="youtube" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="meet.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="stream.meet.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="meetings.googleapis.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="hangouts.googleapis.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="meetings.clients6.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="workspace.turns.goog" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="meet.turns.goog" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="stun.l.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="stun1.l.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="stun2.l.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="stun3.l.google.com" comment="google_meet" } on-error={}
+:do { /ip firewall address-list add list="whitelist-routes" address="stun4.l.google.com" comment="google_meet" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="api2.cursor.sh" comment="cursor" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="api3.cursor.sh" comment="cursor" } on-error={}
 :do { /ip firewall address-list add list="whitelist-routes" address="api4.cursor.sh" comment="cursor" } on-error={}
