@@ -1,5 +1,8 @@
 *.ai.google.dev
 *.aistudio.google.com
+*.antigravity-unleash.goog
+*.antigravity.google
+*.antigravity.googleapis.com
 *.bard.google.com
 *.cdn-telegram.org
 *.cdninstagram.com
@@ -86,6 +89,10 @@ aisandbox-pa.googleapis.com
 aistudio.google.com
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
+antigravity-pa.googleapis.com
+antigravity-unleash.goog
+antigravity.google
+antigravity.googleapis.com
 bard.google.com
 cdn-telegram.org
 cdninstagram.com
