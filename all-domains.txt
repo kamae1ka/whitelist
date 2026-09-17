@@ -33,6 +33,7 @@
 *.periscope.tv
 *.pscp.tv
 *.reactor.cc
+*.rutracker.cc
 *.rutracker.net
 *.rutracker.org
 *.rutrk.org
