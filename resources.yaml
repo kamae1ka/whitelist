@@ -209,6 +209,7 @@ app:
       - antigravity.googleapis.com
       - antigravity-pa.googleapis.com
       - antigravity-unleash.goog
+      - "*.run.app"
       - "*.antigravity.google"
       - "*.antigravity.googleapis.com"
       - "*.antigravity-unleash.goog"
