@@ -46,6 +46,7 @@
 *.periscope.tv
 *.pscp.tv
 *.reactor.cc
+*.run.app
 *.rutracker.cc
 *.rutracker.net
 *.rutracker.org
