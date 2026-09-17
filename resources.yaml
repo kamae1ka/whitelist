@@ -175,6 +175,34 @@ app:
       - stun4.l.google.com
       - "*.meet.google.com"
       - "*.turns.goog"
+  gemini:
+    domains:
+      - gemini.google.com
+      - gemini.google
+      - aistudio.google.com
+      - ai.google.dev
+      - generativeai.google
+      - generativelanguage.googleapis.com
+      - bard.google.com
+      - makersuite.google.com
+      - gemini.gstatic.com
+      - deepmind.google
+      - deepmind.com
+      - ai.studio
+      - aisandbox-pa.googleapis.com
+      - proactivebackend-pa.googleapis.com
+      - alkalimakersuite-pa.clients6.google.com
+      - alkalicore-pa.clients6.google.com
+      - "*.gemini.google.com"
+      - "*.gemini.google"
+      - "*.aistudio.google.com"
+      - "*.ai.google.dev"
+      - "*.generativeai.google"
+      - "*.bard.google.com"
+      - "*.makersuite.google.com"
+      - "*.gemini.gstatic.com"
+      - "*.deepmind.google"
+      - "*.deepmind.com"
   chatgpt:
     domains:
       - openai.com
