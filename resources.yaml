@@ -203,6 +203,15 @@ app:
       - "*.gemini.gstatic.com"
       - "*.deepmind.google"
       - "*.deepmind.com"
+  antigravity:
+    domains:
+      - antigravity.google
+      - antigravity.googleapis.com
+      - antigravity-pa.googleapis.com
+      - antigravity-unleash.goog
+      - "*.antigravity.google"
+      - "*.antigravity.googleapis.com"
+      - "*.antigravity-unleash.goog"
   chatgpt:
     domains:
       - openai.com
