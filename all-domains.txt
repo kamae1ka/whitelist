@@ -1,3 +1,6 @@
+*.ai.google.dev
+*.aistudio.google.com
+*.bard.google.com
 *.cdn-telegram.org
 *.cdninstagram.com
 *.chatgpt.com
@@ -5,6 +8,8 @@
 *.cursor.com
 *.cursor.sh
 *.cursorapi.com
+*.deepmind.com
+*.deepmind.google
 *.docker.com
 *.docker.io
 *.ext-twitch.tv
@@ -15,12 +20,17 @@
 *.fbcdn.net
 *.fbsbx.com
 *.fragment.com
+*.gemini.google
+*.gemini.google.com
+*.gemini.gstatic.com
+*.generativeai.google
 *.ggpht.com
 *.googlevideo.com
 *.hydra.sh
 *.instagram.com
 *.jtvnw.net
 *.live-video.net
+*.makersuite.google.com
 *.meet.google.com
 *.messenger.com
 *.meta.ai
@@ -70,6 +80,13 @@
 accountkit.com
 ads-twitter.com
 ai.com
+ai.google.dev
+ai.studio
+aisandbox-pa.googleapis.com
+aistudio.google.com
+alkalicore-pa.clients6.google.com
+alkalimakersuite-pa.clients6.google.com
+bard.google.com
 cdn-telegram.org
 cdninstagram.com
 chat.com
@@ -81,6 +98,8 @@ cursor-cdn.com
 cursor.com
 cursor.sh
 cursorapi.com
+deepmind.com
+deepmind.google
 docker.com
 docker.io
 ext-twitch.tv
@@ -95,6 +114,11 @@ fbcdn.net
 fbsbx.com
 fbwat.ch
 fragment.com
+gemini.google
+gemini.google.com
+gemini.gstatic.com
+generativeai.google
+generativelanguage.googleapis.com
 ggpht.com
 googlevideo.com
 graph.org
@@ -106,6 +130,7 @@ instagram.com
 jtvnw.net
 live-video.net
 m.me
+makersuite.google.com
 meet.google.com
 meetings.clients6.google.com
 meetings.googleapis.com
@@ -120,6 +145,7 @@ oculuscdn.com
 oculusvr.com
 openai.com
 periscope.tv
+proactivebackend-pa.googleapis.com
 pscp.tv
 quiz.directory
 reactor.cc
