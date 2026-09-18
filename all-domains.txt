@@ -47,7 +47,6 @@
 *.pscp.tv
 *.reactor.cc
 *.run.app
-*.rutracker.cc
 *.rutracker.net
 *.rutracker.org
 *.rutrk.org
@@ -161,6 +160,8 @@ rutracker.net
 rutracker.org
 rutrk.org
 sora.com
+static.cloudflareinsights.com
+static.rutracker.cc
 stun.l.google.com
 stun1.l.google.com
 stun2.l.google.com
