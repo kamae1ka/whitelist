@@ -94,6 +94,7 @@ antigravity-unleash.goog
 antigravity.google
 antigravity.googleapis.com
 bard.google.com
+billing.tel-kom.ru
 cdn-telegram.org
 cdninstagram.com
 chat.com
