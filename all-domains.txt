@@ -29,6 +29,7 @@
 *.generativeai.google
 *.ggpht.com
 *.google.nl
+*.google.ru
 *.googlevideo.com
 *.hydra.sh
 *.instagram.com
@@ -84,6 +85,7 @@
 accountkit.com
 accounts-cctld.l.google.com
 accounts.google.nl
+accounts.google.ru
 ads-twitter.com
 ai.com
 ai.google.dev

@@ -180,8 +180,10 @@ app:
       - "*.meet.google.com"
       - "*.turns.goog"
       - accounts.google.nl
+      - accounts.google.ru
       - accounts-cctld.l.google.com
       - "*.google.nl"
+      - "*.google.ru"
   gemini:
     domains:
       - gemini.google.com
