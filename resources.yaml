@@ -14,13 +14,12 @@ app:
       - "*.rutrk.org"
       - "static.rutracker.cc" 
       - "static.cloudflareinsights.com"
-  oldwork:
-    domains:
-      - billing.tel-kom.ru
   work:
     domains:
       - hydra.sh
       - "*.hydra.sh"
+      - billing.tel-kom.ru
+      - miro.com
   hub_docker_com:
     domains:
       - docker.com
