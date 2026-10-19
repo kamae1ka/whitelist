@@ -145,6 +145,7 @@ meetings.googleapis.com
 messenger.com
 meta.ai
 meta.com
+miro.com
 oaistatic.com
 oaiusercontent.com
 ocul.us
