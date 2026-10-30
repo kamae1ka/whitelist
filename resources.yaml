@@ -4,6 +4,10 @@ app:
     domains:
       - reactor.cc
       - "*.reactor.cc"
+  dotabuff:
+    domains:
+      - dotabuff.com
+      - "*.dotabuff.com"
   rutracker:
     domains:
       - rutracker.org
