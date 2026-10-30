@@ -15,6 +15,7 @@
 *.deepmind.google
 *.docker.com
 *.docker.io
+*.dotabuff.com
 *.ext-twitch.tv
 *.facebook.com
 *.facebook.net
@@ -115,6 +116,7 @@ deepmind.com
 deepmind.google
 docker.com
 docker.io
+dotabuff.com
 ext-twitch.tv
 facebook.com
 facebook.net
