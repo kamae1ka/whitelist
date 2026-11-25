@@ -256,3 +256,31 @@ app:
       - teamworkpm.net
       - "*.teamwork.com"
       - "*.teamworkpm.net"
+  litecoinpool:
+    # майнинг-пул: часть A-записей блокируется провайдером, поэтому явно закрепляем IP
+    domains:
+      - litecoinpool.org
+      - "*.litecoinpool.org"
+    hosts:
+      - 88.80.187.187
+      - 144.76.222.140
+      - 149.210.234.234
+      - 64.225.65.218
+      - 158.69.196.61
+  dogecoin:
+    # кошельки/обозреватели/API Dogecoin
+    domains:
+      - dogechain.info
+      - "*.dogechain.info"
+      - mydoge.com
+      - "*.mydoge.com"
+      - block.io
+      - "*.block.io"
+      - sochain.com
+      - "*.sochain.com"
+      - chain.so
+      - "*.chain.so"
+      - blockcypher.com
+      - "*.blockcypher.com"
+      - blockchair.com
+      - "*.blockchair.com"
