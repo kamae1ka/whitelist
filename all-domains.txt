@@ -4,8 +4,12 @@
 *.antigravity.google
 *.antigravity.googleapis.com
 *.bard.google.com
+*.block.io
+*.blockchair.com
+*.blockcypher.com
 *.cdn-telegram.org
 *.cdninstagram.com
+*.chain.so
 *.chatgpt.com
 *.cursor-cdn.com
 *.cursor.com
@@ -15,6 +19,7 @@
 *.deepmind.google
 *.docker.com
 *.docker.io
+*.dogechain.info
 *.dotabuff.com
 *.ext-twitch.tv
 *.facebook.com
@@ -35,12 +40,14 @@
 *.hydra.sh
 *.instagram.com
 *.jtvnw.net
+*.litecoinpool.org
 *.live-video.net
 *.makersuite.google.com
 *.meet.google.com
 *.messenger.com
 *.meta.ai
 *.meta.com
+*.mydoge.com
 *.oaistatic.com
 *.oaiusercontent.com
 *.oculus.com
@@ -53,6 +60,7 @@
 *.rutracker.net
 *.rutracker.org
 *.rutrk.org
+*.sochain.com
 *.sora.com
 *.t.me
 *.tdesktop.com
@@ -101,8 +109,12 @@ antigravity.google
 antigravity.googleapis.com
 bard.google.com
 billing.tel-kom.ru
+block.io
+blockchair.com
+blockcypher.com
 cdn-telegram.org
 cdninstagram.com
+chain.so
 chat.com
 chatgpt.com
 cms-twdigitalassets.com
@@ -116,6 +128,7 @@ deepmind.com
 deepmind.google
 docker.com
 docker.io
+dogechain.info
 dotabuff.com
 ext-twitch.tv
 facebook.com
@@ -143,6 +156,7 @@ ig.me
 instagr.am
 instagram.com
 jtvnw.net
+litecoinpool.org
 live-video.net
 m.me
 makersuite.google.com
@@ -153,6 +167,7 @@ messenger.com
 meta.ai
 meta.com
 miro.com
+mydoge.com
 oaistatic.com
 oaiusercontent.com
 ocul.us
@@ -168,6 +183,7 @@ reactor.cc
 rutracker.net
 rutracker.org
 rutrk.org
+sochain.com
 sora.com
 static.cloudflareinsights.com
 static.rutracker.cc
